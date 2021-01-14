@@ -53,8 +53,6 @@ class Encoder:
         # 유사도 비교
         sim = self.compare(sentence, words)
         words = dedup(sorted(words, key=lambda x: sim[words.index(x)], reverse=True))  # 키워드 확률 순 정렬
-        print(sim)
-        print(words)
         return words[:top_n]
 
     def __call__(self, word: str) -> tuple:
