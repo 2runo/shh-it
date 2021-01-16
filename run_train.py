@@ -1,0 +1,1 @@
+from curse_detection import train

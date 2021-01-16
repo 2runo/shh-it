@@ -1,0 +1,207 @@
+body {
+    width: 300px;
+    height: 480px;
+    font-family: Noto-R;
+    background-color: #F8F9FA;
+    color: #868E96;
+    margin: 0;
+}
+
+header, article, footer, .main-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    height: 70px;
+    background-color:  #F8F9FA;
+}
+
+.logo {
+    width: 40px;
+    margin-top: 20px;
+}
+.off #logo-off{
+    display: block;
+}
+.on #logo-on {
+    display: block;
+}
+.on #logo-off {
+    display: none;
+}
+.off #logo-on {
+    display: none;
+}
+
+article {
+    height: 330px;
+    background-color:  #F8F9FA;
+}
+
+.main-info {
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 16px;
+    margin: 0;
+    color: #212529;
+    font-family: Noto-L;
+}
+
+h3 {
+    font-size: 36px;
+    margin: 0;
+    color: #212529;
+    font-family: Noto-B;
+}
+
+footer {
+    height: 80px;
+    
+    font-size: 10px;
+}
+
+.font-m {
+    font-family: Noto-M;
+}
+
+.back {
+    width: 210px;
+}
+
+
+.onoffToggle {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    transition-duration: 0.4s;
+    background-color: red;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 30px;
+    
+}
+
+.toggleLing {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100px;
+    top: 5px;
+}
+
+.onoffToggle {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.onoffToggle > span {
+    position: absolute;
+    font-size: 18px;
+    font-family: Noto-B;
+    color: white;
+    top: 6px;
+}
+
+.on .onoffToggle {
+    background-color: #3ED489;
+    box-shadow: 0px 0px 20px -7px #3ED489; 
+}
+.on .onoffToggle:hover {
+    box-shadow: 0px 0px 15px -2px #3ED489; 
+}
+.off .onoffToggle {
+    background-color: #FE3F3F;
+    box-shadow: 0px 0px 20px -7px #FE3F3F;
+}
+.off .onoffToggle:hover {
+    box-shadow: 0px 0px 15px -2px #FE3F3F; 
+}
+
+.on .onoffToggle > .toggleLing {
+    animation: off2on-right 0.4s forwards;
+    animation-timing-function: ease;
+}
+.off .onoffToggle > .toggleLing {
+    animation: on2off-right 0.4s forwards;
+    animation-timing-function: ease;
+}
+
+.on .onoffToggle > span {
+    animation: off2on-left 0.4s forwards;
+    animation-timing-function: ease;
+}
+.off .onoffToggle > span {
+    /* left: 54px; */
+    animation: on2off-left 0.4s forwards;
+    animation-timing-function: ease;
+}
+
+.on #back-off {
+    display: none;
+}
+.on #back-on {
+    display: block;
+}
+.off #back-off {
+    display: block;
+}
+.off #back-on {
+    display: none;
+}
+
+@keyframes off2on-right {
+    from {
+        right: 54px;
+    } to {
+        right: 5px;
+    }
+}
+@keyframes on2off-right {
+    from {
+        right: 5px;
+    } to {
+        right: 54px;
+    }
+}
+@keyframes off2on-left {
+    from {
+        left: 42px;
+    } to {
+        left: 15px;
+    }
+}
+@keyframes on2off-left {
+    from {
+        left: 15px;
+    } to {
+        left: 42px;
+    }
+}
+
+
+@font-face {
+    font-family: Noto-B;
+    src: url("/src/fonts/NotoSansKR-Bold.woff2");
+}
+@font-face {
+    font-family: Noto-M;
+    src: url("/src/fonts/NotoSansKR-Medium.woff2");
+}
+@font-face {
+    font-family: Noto-R;
+    src: url("/src/fonts/NotoSansKR-Regular.woff2");
+}
+@font-face {
+    font-family: Noto-L;
+    src: url("/src/fonts/NotoSansKR-Light.woff2");
+}

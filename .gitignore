@@ -1,3 +1,6 @@
 .venv/
 .idea/
 __pycache__/
+curse_detection/dataset/
+fullchain.pem
+privkey.pem

@@ -1,0 +1,1 @@
+from .curse_detector import CurseDetector
