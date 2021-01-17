@@ -18,7 +18,7 @@ subtitleDiv.setAttribute('count', '0');
 subtitleDiv.style.color = "white";
 subtitleDiv.style.position = "fixed";
 subtitleDiv.style.zIndex = "100";
-subtitleDiv.style.fontSize = "2rem";
+subtitleDiv.style.fontSize = "3rem";
 subtitleDiv.style.backgroundColor = "rgba(0,0,0,0.6)";
 subtitleDiv.style.fontFamily = "Noto Sans KR";
 subtitleDiv.style.padding = "0.5rem 1.5rem";

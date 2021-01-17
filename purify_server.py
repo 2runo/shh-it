@@ -59,6 +59,8 @@ class wsServer():
             text = text.replace('X 되', '좆되')
             text = text.replace('X 돼', '좆돼')
             text = text.replace('X까', '좆까')
+            text = text.replace('쥰X', '존나')
+            text = text.replace('X내', '존나')
             out = p(text)
             if out == text:
                 # 욕설 아닐 때

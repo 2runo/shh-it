@@ -74,6 +74,7 @@ class Purifier:
         masked_text = self.masking(text)  # replace [MASK]
         words = self.unmask(masked_text)
         words.append((np.average([i[0] for i in words[:len(words)//2]]), ''))
+        print(words)
 
         # 욕설 단어 필터링
         c = [self.masking(masked, word[1].replace('##', '')).replace('§', '') for word in words]
@@ -87,6 +88,7 @@ class Purifier:
 
         sim = np.array(self.encoder.compare(org_text, others)) ** 3
         sim = softmax(sim)
+        print(sim)
 
         final_sim = np.array(sim) + words[:,0].astype('float32')
         return sorted([(final_sim[i], j[1]) for i, j in enumerate(words)], reverse=True)
