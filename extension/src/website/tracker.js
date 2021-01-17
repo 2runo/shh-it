@@ -14,7 +14,7 @@ WebFont.load({
 
 var subtitleDiv = document.createElement("div");
 subtitleDiv.id = "shhit-subtitle";
-subtitleDiv.setAttribute('count', {{COUNT}});
+subtitleDiv.setAttribute('count', '0');
 subtitleDiv.style.color = "white";
 subtitleDiv.style.position = "fixed";
 subtitleDiv.style.zIndex = "100";
